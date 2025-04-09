@@ -32,7 +32,7 @@ jobs:
         run: "deno install"
 
       - name: Build step
-        run: "deno run dev"
+        run: "deno compile --unstable --allow-all -o my_app main.ts"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
